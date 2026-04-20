@@ -22,17 +22,29 @@ app.set("view engine", "ejs"); // enngine ejs
 
 
 // 4 Routing code
-app.get("/", function(req, res) {
-    res.end(`<p style = "font-size: 24px; font-weight: 900"> Hello World from MIT </p>`);
-});
+// app.get("/", function(req, res) {
+//     res.end(`<p style = "font-size: 24px; font-weight: 900"> Hello World from MIT </p>`);
+// });
 
-app.get("/about", function(req, res) {
-    res.end(`<p style = "font-size: 24px; font-weight: 900"> Page About Us </p>`);
-});
+// app.get("/about", function(req, res) {
+//     res.end(`<p style = "font-size: 24px; font-weight: 900"> Page About Us </p>`);
+// });
 
-app.get("/payment", function(req, res) {
-    res.end(`<p style = "font-size: 24px; font-weight: 900"> Payment Page </p>`);
-});
+// app.get("/payment", function(req, res) {
+//     res.end(`<p style = "font-size: 24px; font-weight: 900"> Payment Page </p>`);
+// });
+
+app.post("/create-item", (req, res) => {
+    console.log('====================================');
+    console.log(req.body);
+    // console.log(req);
+    res.json({test: "success"})
+    console.log('====================================');
+},)
+
+app.get("/", (req, res) => {
+    res.render('harid');
+})
 
 
 const server = http.createServer(app);
