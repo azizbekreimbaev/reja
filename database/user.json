@@ -4,17 +4,69 @@
   "age": 20,
   "residence": "S.Korea",
   "address": "S.Korea, Busan",
-  "languages": ["Uzbek", "Korean", "English"],
-  "skills": ["HTML", "CSS", "JS", "NodeJS", "Python"],
-  "extra_skills": ["Bootstrap", "Materialize", "Styling", "Sass", "Django", "Flask", "Git Knowledge"],
+  "languages": [
+    "Uzbek",
+    "Korean",
+    "English"
+  ],
+  "skills": [
+    "HTML",
+    "CSS",
+    "JS",
+    "NodeJS",
+    "Python"
+  ],
+  "extra_skills": [
+    "Bootstrap",
+    "Materialize",
+    "Styling",
+    "Sass",
+    "Django",
+    "Flask",
+    "Git Knowledge"
+  ],
   "work_place": "IT Company",
   "service_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
   "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   "city": "Dienau",
-  "title": ["Flower", "Seedlings", "Gardner", "Old", "New"],
-  "flower_desc": ["What is a Flower?", "What is a Seedling?", "Who is Gardner?"],
-  "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "Blossom"],
-  "flower_price": ["15$", "25$", "12$", "20$", "35$", "30$", "22$", "19$", "9$"],
-  "famous_words": ["World is Beautiful with Flowers"],
-  "famous_name": ["Steve Jobs"]
+  "title": [
+    "Flower",
+    "Seedlings",
+    "Gardner",
+    "Old",
+    "New"
+  ],
+  "flower_desc": [
+    "What is a Flower?",
+    "What is a Seedling?",
+    "Who is Gardner?"
+  ],
+  "flower_name": [
+    "Tulip",
+    "Daffodil",
+    "Poppy",
+    "Sunflower",
+    "Bluebell",
+    "Rose",
+    "Snowdrop",
+    "Cherry",
+    "Blossom"
+  ],
+  "flower_price": [
+    "15$",
+    "25$",
+    "12$",
+    "20$",
+    "35$",
+    "30$",
+    "22$",
+    "19$",
+    "9$"
+  ],
+  "famous_words": [
+    "World is Beautiful with Flowers"
+  ],
+  "famous_name": [
+    "Steve Jobs"
+  ]
 }

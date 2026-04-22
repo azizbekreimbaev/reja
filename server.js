@@ -8,8 +8,8 @@ const fs = require('fs');
 
 let user;
 
-fs.readFileSync("database/user.json", "utf8", (err, data) => {
-    if(err) {
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if (err) {
         console.log("ERROR", err);
     } else {
         user = JSON.parse(data)
@@ -21,7 +21,7 @@ fs.readFileSync("database/user.json", "utf8", (err, data) => {
 
 app.use(express.static("public"));  // static images css va boshqa elementlarni joylaymiz shu folderga
 app.use(express.json());   // Client va Server ortasiddagi data JSON formatda boladi shuni OBJECTga otqazib beradi
-app.use(express.urlencoded({extended: true})); // html form post qilinganda input datalarni qanul qilib olish uchun kerak.
+app.use(express.urlencoded({ extended: true })); // html form post qilinganda input datalarni qanul qilib olish uchun kerak.
 
 
 // 2 Session code
@@ -51,7 +51,7 @@ app.post("/create-item", (req, res) => {
     console.log('====================================');
     console.log(req.body);
     // console.log(req);
-    res.json({test: "success"})
+    res.json({ test: "success" })
     console.log('====================================');
 },)
 
@@ -59,8 +59,8 @@ app.get("/", (req, res) => {
     res.render('harid');
 })
 
-app.get("/author" , (req, res) => {
-    res.render("author", {user: user});
+app.get("/author", (req, res) => {
+    res.render("author", { user: user });
 })
 
 
@@ -71,5 +71,5 @@ let PORT = 3000;
 
 server.listen(PORT, function () {
     console.log(`The server is running successfully on port ===> ${PORT}`);
-    
+
 })
