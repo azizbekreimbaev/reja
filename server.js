@@ -3,6 +3,19 @@ console.log("Web server creation stage");
 const express = require('express');
 const app = express();
 const http = require('http');
+const fs = require('fs');
+
+
+let user;
+
+fs.readFileSync("database/user.json", "utf8", (err, data) => {
+    if(err) {
+        console.log("ERROR", err);
+    } else {
+        user = JSON.parse(data)
+    }
+})
+
 
 // 1 Starting Code
 
@@ -44,6 +57,10 @@ app.post("/create-item", (req, res) => {
 
 app.get("/", (req, res) => {
     res.render('harid');
+})
+
+app.get("/author" , (req, res) => {
+    res.render("author", {user: user});
 })
 
 
