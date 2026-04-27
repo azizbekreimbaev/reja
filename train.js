@@ -2,7 +2,34 @@
 // console.log("Train task running!");
 // console.log('====================================');
 
-//  MIDTASK
+
+// MIT-TASK B
+
+let count = 0;
+
+function countnum(sen) {
+    for (let i = 0; i < sen.length; i++) {
+        if (sen[i] <= 9) {
+            count++
+        }  // agar minusli sonlar ham qatnashsa
+
+    }
+    return count;
+}
+
+console.log(countnum("ad2a54y79wet0sfgb9"))
+// console.log(countnum("123456789"))
+
+
+
+
+
+
+
+
+
+
+//  MIT-TASK A
 
 // let count = 0;
 // function num(sen, inc) {
@@ -19,17 +46,17 @@
 
 ////////////////////////////////////////////
 
-console.log('====================================');
-console.log("Jack Ma maslahatlari");
-console.log('====================================');
-const list = [
-    "yaxshi talaba boling", // 0–20
-    "togri boshliq tanlang va koproq hato qiling", // 20–30
-    "uzingizga ishlashingizni boshlang", // 30–40
-    "siz kuchli bolgan narsalarni qiling", // 40–50
-    "yoshlarga investitsiya qiling", // 50–60
-    "endi dam oling, foydasi yoq endi", // 60
-];
+// console.log('====================================');
+// console.log("Jack Ma maslahatlari");
+// console.log('====================================');
+// const list = [
+//     "yaxshi talaba boling", // 0–20
+//     "togri boshliq tanlang va koproq hato qiling", // 20–30
+//     "uzingizga ishlashingizni boshlang", // 30–40
+//     "siz kuchli bolgan narsalarni qiling", // 40–50
+//     "yoshlarga investitsiya qiling", // 50–60
+//     "endi dam oling, foydasi yoq endi", // 60
+// ];
 
 //CALLBACK FUNCTION
 // function maslahatBering(a, callback) {
@@ -106,92 +133,92 @@ const list = [
 // console.log("Passed here 1");
 
 
-//ASYNCH FUNCTION
-async function maslahatBering(a) {
-    if (typeof a !== 'number') {
-        throw new Error("insert a number", null);
-    } else if (a <= 20) {
-        return list[0];
-    } else if (a > 20 && a <= 30) {
-        return list[1];
-    } else if (a > 30 && a <= 40) {
-        return list[2];
-    } else if (a > 40 && a <= 50) {
-        return list[3];
-    } else if (a > 50 && a <= 60) {
-        return list[4];
-    } else {
+// //ASYNCH FUNCTION
+// async function maslahatBering(a) {
+//     if (typeof a !== 'number') {
+//         throw new Error("insert a number", null);
+//     } else if (a <= 20) {
+//         return list[0];
+//     } else if (a > 20 && a <= 30) {
+//         return list[1];
+//     } else if (a > 30 && a <= 40) {
+//         return list[2];
+//     } else if (a > 40 && a <= 50) {
+//         return list[3];
+//     } else if (a > 50 && a <= 60) {
+//         return list[4];
+//     } else {
 
-        // return list[5];
+//         // return list[5];
 
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(list[5])
-            }, 5000);
-        });
-    }
-}
-
-
-
-// //call by then/catch
-// console.log("Passed here 0");
-// maslahatBering(25)
-//     .then(data => {
-//         console.log("response:", data);
-//     })
-//     .catch((err) => {
-//         console.log("ERROR:", err);
-//     });
-// console.log("Passed here 1");
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 resolve(list[5])
+//             }, 5000);
+//         });
+//     }
+// }
 
 
-//Promise hell piramidadek syntaxdan yozish noqulay
 
-// Orniga async functionni call qilishda ham async call qilamiz
-
-// console.log("Passed here 0");
-// maslahatBering(25)
-//     .then(data => {
-//         console.log("Passed here 0");
-//         maslahatBering(25)
-//             .then(data => {
-//                 console.log("Passed here 0");
-//                 maslahatBering(25)
-//                     .then(data => {
-//                         console.log("response:", data);
-//                     })
-//                     .catch((err) => {
-//                         console.log("ERROR:", err);
-//                     });
-//                 console.log("Passed here 1");
-
-//                 console.log("response:", data);
-//             })
-//             .catch((err) => {
-//                 console.log("ERROR:", err);
-//             });
-//         console.log("Passed here 1");
-
-//         console.log("response:", data);
-//     })
-//     .catch((err) => {
-//         console.log("ERROR:", err);
-//     });
-// console.log("Passed here 1");
+// // //call by then/catch
+// // console.log("Passed here 0");
+// // maslahatBering(25)
+// //     .then(data => {
+// //         console.log("response:", data);
+// //     })
+// //     .catch((err) => {
+// //         console.log("ERROR:", err);
+// //     });
+// // console.log("Passed here 1");
 
 
-// call by asynch/ await
-async function run() {
-    let res = await maslahatBering(20);
-    console.log(res);
-    res = await maslahatBering(31);
-    console.log(res);
-    res = await maslahatBering(51);
-    console.log(res);
+// //Promise hell piramidadek syntaxdan yozish noqulay
 
-}
+// // Orniga async functionni call qilishda ham async call qilamiz
 
-run();
+// // console.log("Passed here 0");
+// // maslahatBering(25)
+// //     .then(data => {
+// //         console.log("Passed here 0");
+// //         maslahatBering(25)
+// //             .then(data => {
+// //                 console.log("Passed here 0");
+// //                 maslahatBering(25)
+// //                     .then(data => {
+// //                         console.log("response:", data);
+// //                     })
+// //                     .catch((err) => {
+// //                         console.log("ERROR:", err);
+// //                     });
+// //                 console.log("Passed here 1");
+
+// //                 console.log("response:", data);
+// //             })
+// //             .catch((err) => {
+// //                 console.log("ERROR:", err);
+// //             });
+// //         console.log("Passed here 1");
+
+// //         console.log("response:", data);
+// //     })
+// //     .catch((err) => {
+// //         console.log("ERROR:", err);
+// //     });
+// // console.log("Passed here 1");
+
+
+// // call by asynch/ await
+// async function run() {
+//     let res = await maslahatBering(20);
+//     console.log(res);
+//     res = await maslahatBering(31);
+//     console.log(res);
+//     res = await maslahatBering(51);
+//     console.log(res);
+
+// }
+
+// run();
 
 
