@@ -3,19 +3,88 @@
 // console.log('====================================');
 
 
-// MIT-TASK B
+// MIT-TASK C
 
-let count = 0;
+const moment = require('moment');
 
-function countnum(sen) {
-    for (let i = 0; i < sen.length; i++) {
-        if (sen[i] <= 9) {
-            count++
-        }  // agar minusli sonlar ham qatnashsa
+
+// console.log('====================================');
+// console.log(moment().format('MMMM Do YYYY, h:mm a'));
+// console.log('====================================');
+
+
+const time = moment().format('MMMM Do YYYY, h:mm a');
+
+class Shop {
+    constructor(param1, param2, param3) {
+        this.param1 = param1;
+        this.param2 = param2;
+        this.param3 = param3;
 
     }
-    return count;
+
+    qoldiq(item1, item2, item3) {
+        console.log('====================================');
+        console.log(`Bugun hozir ${time} da ${this.param1} ta ${item1}, ${this.param2} ta ${item2} va ${this.param3} ta ${item3} mavjud! `);
+        console.log('====================================');
+    }
+
+    sotish(item, num) {
+        if (item === "non") {
+            this.param1 -= num;
+        } else if (item === "lag'mon") {
+            this.param2 -= num;
+        } else {
+            this.param3 -= num;
+        }
+    }
+
+    qabul(item, num) {
+        if (item === "non") {
+            this.param1 += num;
+        } else if (item === "lag'mon") {
+            this.param2 += num;
+        } else {
+            this.param3 += num;
+        }
+    }
 }
+
+
+
+const shop = new Shop(4, 5, 2);
+
+// shop.qoldiq("non", "lag'mon", "cola");
+
+// shop.sotish("non", 3)
+
+// shop.qoldiq("non", "lag'mon", "cola")
+
+// shop.qabul("cola", 4)
+
+// shop.qoldiq("non", "lag'mon", "cola")
+
+// shop.qabul("lag'mon", 4)
+// shop.qoldiq("non", "lag'mon", "cola")
+
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+shop.qoldiq("non", "lag'mon", "cola");
+
+
+// // MIT-TASK B
+
+// let count = 0;
+
+// function countnum(sen) {
+//     for (let i = 0; i < sen.length; i++) {
+//         if (sen[i] <= 9) {
+//             count++
+//         }  // agar minusli sonlar ham qatnashsa
+
+//     }
+//     return count;
+// }
 
 // console.log(countnum("-3-4ad2a54y79wet0sfgb9"))
 // console.log(countnum("123456789"))
