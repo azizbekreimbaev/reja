@@ -15,7 +15,7 @@
         <div class="jumbotron p-3 shadow-sm mt-5 bg-light" style="border-radius: 25px;">
             <form id="create-form" action="/create-item" method="post">
                 <div class="d-flex align-items-center">
-                    <input type="text" name="reja" id="create-field" autofocus autocomplete="off"
+                    <input type="text" name="reja" id="create-field" tabindex="5" autofocus autocomplete="off"
                         class="form-control me-5" style="flex: 1; font-size:24px" />
                     <button class="btn btn-primary" style="border-radius: 25px; padding: 10px 25px">
                         Yangi Reja Qoshish
@@ -42,6 +42,8 @@
         <button id="clean-all" class="btn btn-danger" style="border-radius: 20px; padding: 5px 20px;">Hamma Rejalarni
             Ochirish</button>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
 </body>
 
 </html>

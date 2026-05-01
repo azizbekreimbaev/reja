@@ -17,7 +17,7 @@ function countnum(sen) {
     return count;
 }
 
-console.log(countnum("ad2a54y79wet0sfgb9"))
+// console.log(countnum("-3-4ad2a54y79wet0sfgb9"))
 // console.log(countnum("123456789"))
 
 
