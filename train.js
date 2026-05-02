@@ -54,7 +54,7 @@ class Shop {
 
 const shop = new Shop(4, 5, 2);
 
-// shop.qoldiq("non", "lag'mon", "cola");
+shop.qoldiq("non", "lag'mon", "cola");
 
 // shop.sotish("non", 3)
 
