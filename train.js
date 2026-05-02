@@ -22,7 +22,7 @@ class Shop {
         this.param3 = param3;
 
     }
-
+    // qoldiq parametr berildi boshqa mahsulot ham hisobga olgan holda
     qoldiq(item1, item2, item3) {
         console.log('====================================');
         console.log(`Bugun hozir ${time} da ${this.param1} ta ${item1}, ${this.param2} ta ${item2} va ${this.param3} ta ${item3} mavjud! `);
@@ -54,7 +54,7 @@ class Shop {
 
 const shop = new Shop(4, 5, 2);
 
-shop.qoldiq("non", "lag'mon", "cola");
+shop.qoldiq("non", "lag'mon", "cola");  // SHOP faqat non lagmon va cola emas boshqa mahsulotlar bolishi ham mumkin deb qoldiq metodga parametr berildi.
 
 // shop.sotish("non", 3)
 
