@@ -2,74 +2,117 @@
 // console.log("Train task running!");
 // console.log('====================================');
 
+// MIT-TASK D
 
-// MIT-TASK C
+const list1 = [];
+const list2 = [];
 
-const moment = require('moment');
-
-
-// console.log('====================================');
-// console.log(moment().format('MMMM Do YYYY, h:mm a'));
-// console.log('====================================');
-
-
-const time = moment().format('MMMM Do YYYY, h:mm a');
-
-class Shop {
-    constructor(param1, param2, param3) {
-        this.param1 = param1;
-        this.param2 = param2;
-        this.param3 = param3;
-
+function checkContent(item1, item2) {
+    for (let i = 0; i < item1.length; i++) {
+        // console.log(item1[i])
+        list1.push(item1[i])
     }
-    // qoldiq parametr berildi boshqa mahsulot ham hisobga olgan holda
-    qoldiq(item1, item2, item3) {
-        console.log('====================================');
-        console.log(`Bugun hozir ${time} da ${this.param1} ta ${item1}, ${this.param2} ta ${item2} va ${this.param3} ta ${item3} mavjud! `);
-        console.log('====================================');
+    for (let i = 0; i < item2.length; i++) {
+        // console.log(item2[i])
+        list2.push(item2[i])
     }
 
-    sotish(item, num) {
-        if (item === "non") {
-            this.param1 -= num;
-        } else if (item === "lag'mon") {
-            this.param2 -= num;
-        } else {
-            this.param3 -= num;
-        }
+    let sorted1 = list1.sort().join('')
+    let sorted2 = list2.sort().join('')
+
+    // console.log(sorted1);
+    // console.log(sorted2);
+
+
+    if (sorted1 == sorted2) {
+        return true
+    } else {
+        return false
     }
 
-    qabul(item, num) {
-        if (item === "non") {
-            this.param1 += num;
-        } else if (item === "lag'mon") {
-            this.param2 += num;
-        } else {
-            this.param3 += num;
-        }
-    }
+
+    // console.log(list1.sort())
+    // console.log(list2.sort())
 }
 
+console.log(checkContent("mitgroup", "gmtiprou"));
+console.log(checkContent("Kevin", "Kevin"));
 
 
-const shop = new Shop(4, 5, 2);
 
-shop.qoldiq("non", "lag'mon", "cola");  // SHOP faqat non lagmon va cola emas boshqa mahsulotlar bolishi ham mumkin deb qoldiq metodga parametr berildi.
 
-// shop.sotish("non", 3)
 
-// shop.qoldiq("non", "lag'mon", "cola")
 
-// shop.qabul("cola", 4)
 
-// shop.qoldiq("non", "lag'mon", "cola")
 
-// shop.qabul("lag'mon", 4)
-// shop.qoldiq("non", "lag'mon", "cola")
 
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-shop.qoldiq("non", "lag'mon", "cola");
+// // MIT-TASK C
+
+// const moment = require('moment');
+
+
+// // console.log('====================================');
+// // console.log(moment().format('MMMM Do YYYY, h:mm a'));
+// // console.log('====================================');
+
+
+// const time = moment().format('MMMM Do YYYY, h:mm a');
+
+// class Shop {
+//     constructor(param1, param2, param3) {
+//         this.param1 = param1;
+//         this.param2 = param2;
+//         this.param3 = param3;
+
+//     }
+//     // qoldiq parametr berildi boshqa mahsulot ham hisobga olgan holda
+//     qoldiq(item1, item2, item3) {
+//         console.log('====================================');
+//         console.log(`Bugun hozir ${time} da ${this.param1} ta ${item1}, ${this.param2} ta ${item2} va ${this.param3} ta ${item3} mavjud! `);
+//         console.log('====================================');
+//     }
+
+//     sotish(item, num) {
+//         if (item === "non") {
+//             this.param1 -= num;
+//         } else if (item === "lag'mon") {
+//             this.param2 -= num;
+//         } else {
+//             this.param3 -= num;
+//         }
+//     }
+
+//     qabul(item, num) {
+//         if (item === "non") {
+//             this.param1 += num;
+//         } else if (item === "lag'mon") {
+//             this.param2 += num;
+//         } else {
+//             this.param3 += num;
+//         }
+//     }
+// }
+
+
+
+// const shop = new Shop(4, 5, 2);
+
+// shop.qoldiq("non", "lag'mon", "cola");  // SHOP faqat non lagmon va cola emas boshqa mahsulotlar bolishi ham mumkin deb qoldiq metodga parametr berildi.
+
+// // shop.sotish("non", 3)
+
+// // shop.qoldiq("non", "lag'mon", "cola")
+
+// // shop.qabul("cola", 4)
+
+// // shop.qoldiq("non", "lag'mon", "cola")
+
+// // shop.qabul("lag'mon", 4)
+// // shop.qoldiq("non", "lag'mon", "cola")
+
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
+// shop.qoldiq("non", "lag'mon", "cola");
 
 
 // // MIT-TASK B
