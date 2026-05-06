@@ -2,41 +2,64 @@
 // console.log("Train task running!");
 // console.log('====================================');
 
-// MIT-TASK D
+// MIT-TASK E
 
-const list1 = [];
-const list2 = [];
+const list = [];
 
-function checkContent(item1, item2) {
-    for (let i = 0; i < item1.length; i++) {
-        // console.log(item1[i])
-        list1.push(item1[i])
+function getReverse(string) {
+    for (let i = 0; i < string.length; i++) {
+        const element = string[i];
+        list.push(element)
     }
-    for (let i = 0; i < item2.length; i++) {
-        // console.log(item2[i])
-        list2.push(item2[i])
-    }
-
-    let sorted1 = list1.sort().join('')
-    let sorted2 = list2.sort().join('')
-
-    // console.log(sorted1);
-    // console.log(sorted2);
-
-
-    if (sorted1 == sorted2) {
-        return true
-    } else {
-        return false
-    }
-
-
-    // console.log(list1.sort())
-    // console.log(list2.sort())
+    return list.reverse().join('')
 }
 
-console.log(checkContent("mitgroup", "gmtiprou"));
-console.log(checkContent("Kevin", "Kevin"));
+// console.log(getReverse("hello"));
+console.log(getReverse("Kevin"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // MIT-TASK D
+
+// const list1 = [];
+// const list2 = [];
+// function checkContent(item1, item2) {
+//     for (let i = 0; i < item1.length; i++) {
+//         // console.log(item1[i])
+//         list1.push(item1[i])
+//     }
+
+//     for (let i = 0; i < item2.length; i++) {
+//         // congit sole.log(item2[i])
+//         list2.push(item2[i])
+//     }
+
+//     let sorted1 = list1.sort().join('')
+//     let sorted2 = list2.sort().join('')
+//     // console.log(sorted1);
+//     // console.log(sorted2);
+//     if (sorted1 == sorted2) {
+//         return true
+//     } else {
+//         return false
+//     }
+
+//     // console.log(list1.sort())
+//     // console.log(list2.sort())
+// }
+
+// // console.log(checkContent("mitgroup", "gmtiprou"));
+// console.log(checkContent("Kevin", "Kevin"));
 
 
 

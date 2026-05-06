@@ -11,7 +11,7 @@ function itemTemplate(item) {
                         ${item.reja}
                     </span>
                     <div>
-                        <button data-id="${item._id}" class="edit-me btn btn-secondery btn-sm mr-1">Change</button>
+                        <button data-id="${item._id}" style="background-color: #666; color:#fff;" class="edit-me btn btn-secondery btn-sm mr-1">Change</button>
                         <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">Delete</button>
                     </div>
                 </li>`
