@@ -2,20 +2,54 @@
 // console.log("Train task running!");
 // console.log('====================================');
 
-// MIT-TASK E
 
-const list = [];
+// MIT-TASK F
 
-function getReverse(string) {
-    for (let i = 0; i < string.length; i++) {
-        const element = string[i];
-        list.push(element)
+//gptdan foydalandim  let b = a + 1 ikkinchi for qanday mantioq bilan boshlashni bilmadim
+
+const list = []
+function findDoublers(str) {
+
+    for (let i = 0; i < str.length; i++) {
+        list.push(str[i])
     }
-    return list.reverse().join('')
+
+    for (let a = 0; a < list.length; a++) {
+
+
+        for (let b = a + 1; b < list.length; b++) {
+            // console.log(list[a], list[b])
+            if (list[a] === list[b]) {
+                return true
+            }
+        }
+    }
+    return false
 }
 
-// console.log(getReverse("hello"));
-console.log(getReverse("Kevin"));
+console.log(findDoublers("helo"))
+
+
+
+
+
+
+
+
+// // MIT-TASK E
+
+// const list = [];
+
+// function getReverse(string) {
+//     for (let i = 0; i < string.length; i++) {
+//         const element = string[i];
+//         list.push(element)
+//     }
+//     return list.reverse().join('')
+// }
+
+// // console.log(getReverse("hello"));
+// console.log(getReverse("Kevin"));
 
 
 
