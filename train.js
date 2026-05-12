@@ -2,32 +2,50 @@
 // console.log("Train task running!");
 // console.log('====================================');
 
+//MIT-TASK G
+//Yagona parametrga ega function tuzing. Array tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+// Masalan: getHighestIndex([5, 21, 12, 21, 8]) return 1
 
-// MIT-TASK F
-
-//gptdan foydalandim  let b = a + 1 ikkinchi for qanday mantioq bilan boshlashni bilmadim
-
-const list = []
-function findDoublers(str) {
-
-    for (let i = 0; i < str.length; i++) {
-        list.push(str[i])
-    }
-
-    for (let a = 0; a < list.length; a++) {
-
-
-        for (let b = a + 1; b < list.length; b++) {
-            // console.log(list[a], list[b])
-            if (list[a] === list[b]) {
-                return true
-            }
+function getHighestIndex(list) {
+    let max = list[0]
+    let index = 0
+    for (let i = 0; i < list.length; i++) {
+        if (max < list[i]) {
+            max = list[i]
+            index = i
         }
     }
-    return false
+    return index
 }
 
-console.log(findDoublers("helo"))
+console.log(getHighestIndex([5, 21, 12, 44, 21, 8]))
+
+
+// // MIT-TASK F
+
+// //gptdan foydalandim  let b = a + 1 ikkinchi for qanday mantioq bilan boshlashni bilmadim
+
+// const list = []
+// function findDoublers(str) {
+
+//     for (let i = 0; i < str.length; i++) {
+//         list.push(str[i])
+//     }
+
+//     for (let a = 0; a < list.length; a++) {
+
+
+//         for (let b = a + 1; b < list.length; b++) {
+//             // console.log(list[a], list[b])
+//             if (list[a] === list[b]) {
+//                 return true
+//             }
+//         }
+//     }
+//     return false
+// }
+
+// console.log(findDoublers("helo"))
 
 
 
