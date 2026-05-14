@@ -2,23 +2,42 @@
 // console.log("Train task running!");
 // console.log('====================================');
 
-//MIT-TASK G
-//Yagona parametrga ega function tuzing. Array tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
-// Masalan: getHighestIndex([5, 21, 12, 21, 8]) return 1
 
-function getHighestIndex(list) {
-    let max = list[0]
-    let index = 0
-    for (let i = 0; i < list.length; i++) {
-        if (max < list[i]) {
-            max = list[i]
-            index = i
-        }
+// MIT- TASK H
+
+let list = [2, 4, 6, -4, -1, 20]
+let new_list = []
+// console.log(new_list)
+for (let i = 0; i < list.length; i++) {
+    if (list[i] > 0) {
+        new_list.push(list[i])
     }
-    return index
 }
 
-console.log(getHighestIndex([5, 21, 12, 44, 21, 8]))
+let result = new_list.join('')
+console.log(result)
+
+
+
+
+
+// //MIT-TASK G
+// //Yagona parametrga ega function tuzing. Array tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+// // Masalan: getHighestIndex([5, 21, 12, 21, 8]) return 1
+
+// function getHighestIndex(list) {
+//     let max = list[0]
+//     let index = 0
+//     for (let i = 0; i < list.length; i++) {
+//         if (max < list[i]) {
+//             max = list[i]
+//             index = i
+//         }
+//     }
+//     return index
+// }
+
+// console.log(getHighestIndex([5, 21, 12, 44, 21, 8]))
 
 
 // // MIT-TASK F
