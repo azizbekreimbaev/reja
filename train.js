@@ -2,20 +2,55 @@
 // console.log("Train task running!");
 // console.log('====================================');
 
+const { max } = require("moment");
 
-// MIT- TASK H
 
-let list = [2, 4, 6, -4, -1, 20]
-let new_list = []
-// console.log(new_list)
+// MIT-TASK I
+
+// Array ichida eng ko'p takrorlangan raqamni topib qaytarsin.
+
+// Masalan: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]) return 4
+
+const list = [1, 2, 3, 4, 5, 4, 3, 4, 1, 1, 1       ]
+let count = 0
+let maxCount = 0
+let result
 for (let i = 0; i < list.length; i++) {
-    if (list[i] > 0) {
-        new_list.push(list[i])
+    count = 1
+    for (let j = i + 1; j < list.length; j++) {
+        // console.log("============")
+        // console.log(list[i] == list[j])
+
+        if (list[i] == list[j]) {
+            count++
+        }
+    }
+    if (count > maxCount) {
+        maxCount = count
+        result = list[i]
     }
 }
-
-let result = new_list.join('')
 console.log(result)
+
+
+
+
+
+
+
+// // MIT- TASK H
+
+// let list = [2, 4, 6, -4, -1, 20]
+// let new_list = []
+// // console.log(new_list)
+// for (let i = 0; i < list.length; i++) {
+//     if (list[i] > 0) {
+//         new_list.push(list[i])
+//     }
+// }
+
+// let result = new_list.join('')
+// console.log(result)
 
 
 
